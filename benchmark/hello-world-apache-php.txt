@@ -10,35 +10,35 @@ Server Hostname:        127.0.0.1
 Server Port:            8081
 
 Document Path:          /
-Document Length:        11 bytes
+Document Length:        27 bytes
 
 Concurrency Level:      32
-Time taken for tests:   14.542 seconds
+Time taken for tests:   15.391 seconds
 Complete requests:      100000
 Failed requests:        0
-Total transferred:      20400000 bytes
-HTML transferred:       1100000 bytes
-Requests per second:    6876.44 [#/sec] (mean)
-Time per request:       4.654 [ms] (mean)
-Time per request:       0.145 [ms] (mean, across all concurrent requests)
-Transfer rate:          1369.92 [Kbytes/sec] received
+Total transferred:      22000000 bytes
+HTML transferred:       2700000 bytes
+Requests per second:    6497.50 [#/sec] (mean)
+Time per request:       4.925 [ms] (mean)
+Time per request:       0.154 [ms] (mean, across all concurrent requests)
+Transfer rate:          1395.95 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   0.4      0       5
-Processing:     0    4   1.8      4     209
-Waiting:        0    4   1.7      3     209
-Total:          0    5   1.7      4     209
+Connect:        0    1   0.4      0       6
+Processing:     0    4   2.6      4     215
+Waiting:        0    4   2.5      4     215
+Total:          0    5   2.5      5     215
 ERROR: The median and mean for the initial connection time are more than twice the standard
        deviation apart. These results are NOT reliable.
 
 Percentage of the requests served within a certain time (ms)
-  50%      4
+  50%      5
   66%      5
-  75%      5
+  75%      6
   80%      6
   90%      7
   95%      8
-  98%      9
-  99%     10
- 100%    209 (longest request)
+  98%     10
+  99%     12
+ 100%    215 (longest request)

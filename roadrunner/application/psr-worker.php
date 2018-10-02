@@ -14,7 +14,7 @@ $psr7 = new RoadRunner\PSR7Client($worker);
 while ($req = $psr7->acceptRequest()) {
     try {
         $resp = new \Zend\Diactoros\Response();
-        $resp->getBody()->write("hello world");
+        $resp->getBody()->write("hello world from roadrunner");
 
         $psr7->respond($resp);
     } catch (\Throwable $e) {
