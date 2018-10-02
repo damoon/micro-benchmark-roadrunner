@@ -1,0 +1,23 @@
+{
+  "name": "spiral/roadrunner",
+  "type": "library",
+  "description": "High-performance PHP load balancer and process manager library for Golang",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Anton Titov / Wolfy-J",
+      "email": "wolfy.jd@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "spiral/goridge": "^2.0",
+    "psr/http-message": "^1.0",
+    "zendframework/zend-diactoros": "^1.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Spiral\\RoadRunner\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  roadrunner:
+    build: roadrunner
+    ports:
+     - "8080:8080"
+  php-apache:
+    build: php-apache
+    ports:
+     - "8081:80"
