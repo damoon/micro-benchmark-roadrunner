@@ -1,14 +1,47 @@
 version: '3'
 services:
-  roadrunner:
-    build: roadrunner
+  hello-world-roadrunner:
+    build: hello-world-roadrunner
     ports:
      - "8080:8080"
-  php-apache:
-    build: php-apache
+  hello-world-php-apache:
+    build: hello-world-php-apache
     ports:
      - "8081:80"
-  golang:
-    build: golang
+  hello-world-golang:
+    build: hello-world-golang
     ports:
      - "8082:80"
+  symfony-roadrunner:
+    build: symfony-roadrunner
+    ports:
+     - "8083:8080"
+#  symfony-php-apache:
+#    build: symfony-php-apache
+#    ports:
+#     - "8084:80"
+
+  symfony-php:
+    build:
+      context: symfony-php-nginx
+      dockerfile: php/Dockerfile
+    ports:
+      - "9000:9000"
+#    volumes:
+#      - ./symfony-php-nginx/application:/var/www/symfony:cached
+#      - ./logs/symfony:/var/www/symfony/var/logs:cached
+#    links:
+#      - db
+#    extra_hosts:
+#      - "docker.host:127.0.0.1"
+  symfony-nginx:
+    build:
+      context: symfony-php-nginx
+      dockerfile: nginx/Dockerfile
+    ports:
+     - "8085:80"
+    links:
+      - symfony-php:php
+#    volumes:
+#      - ./logs/nginx:/var/log/nginx:cached
+#      - ./symfony-php-nginx/application:/var/www/symfony:cached
